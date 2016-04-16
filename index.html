@@ -4,9 +4,7 @@
   <head>
     <title>Class 1 ~ PHP/MySQL ~ Girl Develop It</title>
 
-    <meta name="description" content="This is a modification of the official Girl Develop It PHP/MySQL curriculum, developed by Sylvia Richardson for the Raleigh/Durham chapter.
-
-    The course is meant to be taught in 4 two-hour sections. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
+    <meta name="description" content="This is a modification of the official Girl Develop It PHP/MySQL curriculum, developed by Sylvia Richardson for the Raleigh/Durham chapter. Additional modifications have been made by Randy Walker to fit the Detroit chapter. The course is meant to be taught in 2 four-hour sessions (2 classes per session). Each of the slides and practice files are customizable according to the needs of a given class or audience.">
     <meta name="author" content="Girl Develop It">
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -14,6 +12,7 @@
 
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/simple.css" id="theme">
+    <link rel="stylesheet" href="css/custom.css">
 
     <!-- For syntax highlighting -->
     <!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
@@ -49,16 +48,16 @@
       <div class="slides">
         <!-- Opening slide -->
         <section>
-          <img src = "img/circle-gdi-logo.png" alt="GDI Logo">
+          <img src="img/circle-gdi-logo.png" alt="GDI Logo" class="noborder" style="max-height:400px;">
           <h3>Intro to PHP and MySQL</h3>
         </section>
         <section>
           <h3>Class Slides</h3>
           <ul>
-            <li><a href="class1.html">Class 1</a></li>
-            <li><a href="class2.html">Class 2</a></li>
-            <li><a href="class3.html">Class 3</a></li>
-            <li><a href="class4.html">Class 4</a></li>
+            <li><a href="class1-1.html">Class 1, Part 1</a></li>
+            <li><a href="class1-2.html">Class 1, Part 2</a></li>
+            <li><a href="class2-1.html">Class 2, Part 1</a></li>
+            <li><a href="class2-2.html">Class 2, Part 2</a></li>
           </ul>
         </section>
       </div>
@@ -94,7 +93,7 @@
           { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
           { src: 'plugin/zoom-js/zoom.js', async: true },
           { src: 'plugin/notes/notes.js', async: true },
-                    { src: 'plugin/accessibility-helper/js/accessibility-helper.js', async: true, condition: function() { return !!document.body.classList; } }
+          { src: 'plugin/accessibility-helper/js/accessibility-helper.js', async: true, condition: function() { return !!document.body.classList; } }
         ]
       });
 

@@ -2,15 +2,14 @@
 <html lang="en">
 
   <head>
-    <title>Class 4 ~ PHP/MySQL ~ Girl Develop It</title>
+    <title>PHP/MySQL ~ Girl Develop It: Class 2, Part 2</title>
 
-    <meta name="description" content="This is a modification of the official Girl Develop It PHP/MySQL curriculum, developed by Sylvia Richardson for the Raleigh/Durham chapter.
-
-    The course is meant to be taught in 4 two-hour sections. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
+    <meta name="description" content="This is a modification of the official Girl Develop It PHP/MySQL curriculum, developed by Sylvia Richardson for the Raleigh/Durham chapter. Additional modifications have been made by Randy Walker to fit the Detroit chapter. The course is meant to be taught in 2 four-hour sessions (2 classes per session). Each of the slides and practice files are customizable according to the needs of a given class or audience.">
     <meta name="author" content="Girl Develop It">
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="stylesheet" href="css/custom.css">
 
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/simple.css" id="theme">
@@ -50,26 +49,9 @@
         <!-- Opening slide -->
         <section>
           <section>
-            <img src = "img/circle-gdi-logo.png" alt="GDI Logo">
+            <img src="img/circle-gdi-logo.png" alt="GDI Logo" class="noborder" style="max-height:400px;">
             <h3>Intro to PHP and MySQL</h3>
-            <h4>Class 4</h4>
-          </section>
-        </section>
-
-        <!-- Welcome-->
-        <section id="welcome">
-          <section>
-            <h3>Welcome!</h3>
-            <div class = "left-align">
-            <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
-            <p class ="green">Some "rules"</p>
-            <ul>
-              <li>We are here for you!</li>
-              <li>Every question is important.</li>
-              <li>Help each other.</li>
-              <li>Have fun.</li>
-            </ul>
-            </div>
+            <h4>Class 2, Part 2</h4>
           </section>
         </section>
 
@@ -181,7 +163,7 @@
           <section>
             <h3>Create an index on companyID_fk</h3>
             <img src="img/phpMyAdmin-addindex.png" alt="Add an index"/>
-<pre><code class="sql">ALTER TABLE product ADD INDEX (companyID_fk) ;
+<pre><code class="sql">ALTER TABLE product ADD INDEX (companyID_fk);
 </code></pre>
           </section>
           <section>
@@ -229,8 +211,31 @@ INSERT INTO product SET  companyID_fk=2, type='Dip Into Decaf', roast='light', d
 </code></pre>
           </section>
           <section>
+            <h3>Using DB information in forms</h3>
+            <p>How can we do that? We can use SQL to ask the database for information:</p>
+<pre><code class="sql">SELECT companyID, name FROM company ORDER BY name;
+</code></pre>
+          </section>
+          <section>
+            <h3>Using DB information in forms</h3>
+            <p>Then use a while loop to add this to our page</p>
+<pre><code class="php">$sql='SELECT companyID, name FROM company ORDER BY name';
+$result = mysqli_query($link, $sql);
+if (!$result) {
+  $error = 'Error fetching data: ' . mysqli_error($link);
+  echo $error;
+  exit();
+}
+while($recording=mysqli_fetch_array($result)){
+  //Some awesome PHP code here
+}
+</code></pre>
+          </section>
+
+          <section>
             <h3>Let's Develop It</h3>
             <p>Your sample code has a file called add-products.php. It is almost complete. Add code to the commented sections to get it to work.</p>
+            <p>Get stuck? Try looking at view-products.php to see how the while loop works there.</p>
           </section>
         </section>
 
@@ -250,10 +255,18 @@ INSERT INTO product SET  companyID_fk=2, type='Dip Into Decaf', roast='light', d
           <section>
           <h3>Using parameters</h3>
           <p>You can retrieve a parameter's value and store it as a variable</p>
+          <p>If you use a URL like this:</p>
 <pre><code class="string">http://www.website.com/file.php?parameter=value
 </code></pre>
+          <p>You can retrieve the values like this:</p>
 <pre><code class="php">$variableName = htmlspecialchars($_GET["parameter"]);
 </code></pre>
+          </section>
+          <section>
+            <h3>Using parameters on our site</h3>
+            <p>How can we use this? On the view products page, I have set up a delete link for each item.</p>
+            <img src="img/delete-link.png" alt="Screenshot with delete link highlighted"/>
+            <p>This link uses a parameter to send the product ID to the delete page.</p>
           </section>
           <section>
             <h3>Let's Develop It</h3>
@@ -271,14 +284,42 @@ INSERT INTO product SET  companyID_fk=2, type='Dip Into Decaf', roast='light', d
           <section>
             <h3>Editing data</h3>
             <p>Let's combine queries, forms, parameters, and logic all into one. We will</p>
-            <ul>
+            <ol>
               <li>Pass a product ID to a page using parameters</li>
               <li>Save that parameter as a variable</li>
               <li>Use a query to pull the associated data</li>
               <li>Pre-load that data into a form</li>
               <li>Send the form to processing script</li>
               <li>Update the database.</li>
-            </ul>
+            </ol>
+          </section>
+          <section>
+            <h3>Let's build it - Step 1</h3>
+            <p>On the view products page, I have set up an edit link for each item.</p>
+            <img src="img/edit-link.png" alt="Screenshot with edit link highlighted"/>
+            <p>This link uses a parameter to send the product ID to the edit page.</p>
+          </section>
+          <section>
+            <h3>Let's build it - Step 2</h3>
+            <p>In the file edit-products.php, we will:</p>
+            <ol>
+              <li>Retrieve the product ID and save it as a variable</li>
+              <li>Use the product ID in an SQL query:
+<pre><code class="sql">SELECT fields FROM tablename WHERE field='value'
+</code></pre>
+              </li>
+              <li>Pre-load that data into a form that the user can edit</li>
+              <li>Send the form data to processing script</li>
+            </ol>
+          </section>
+          <section>
+            <h3>Let's build it - Step 3</h3>
+            <p>In the file product_edit_result.php, we will:</p>
+            <ol>
+              <li>Take in data from the form</li>
+              <li>Update the database</li>
+              <li>Send the user back to the table of products</li>
+            </ol>
           </section>
           <section>
             <h3>Let's Develop It</h3>
