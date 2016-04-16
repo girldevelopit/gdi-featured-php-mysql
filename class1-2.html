@@ -2,15 +2,14 @@
 <html lang="en">
 
   <head>
-    <title>Class 2 ~ PHP/MySQL ~ Girl Develop It</title>
+    <title>PHP/MySQL ~ Girl Develop It: Class 1, Part 2</title>
 
-    <meta name="description" content="This is a modification of the official Girl Develop It PHP/MySQL curriculum, developed by Sylvia Richardson for the Raleigh/Durham chapter.
-
-    The course is meant to be taught in 4 two-hour sections. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
+    <meta name="description" content="This is a modification of the official Girl Develop It PHP/MySQL curriculum, developed by Sylvia Richardson for the Raleigh/Durham chapter. Additional modifications have been made by Randy Walker to fit the Detroit chapter. The course is meant to be taught in 2 four-hour sessions (2 classes per session). Each of the slides and practice files are customizable according to the needs of a given class or audience.">
     <meta name="author" content="Girl Develop It">
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="stylesheet" href="css/custom.css">
 
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/simple.css" id="theme">
@@ -50,33 +49,20 @@
         <!-- Opening slide -->
         <section>
           <section>
-            <img src = "img/circle-gdi-logo.png" alt="GDI Logo">
+            <img src="img/circle-gdi-logo.png" alt="GDI Logo" class="noborder" style="max-height:400px;">
             <h3>Intro to PHP and MySQL</h3>
-            <h4>Class 2</h4>
+            <h4>Class 1, Part 2</h4>
           </section>
         </section>
 
         <!-- Welcome-->
         <section id="welcome">
           <section>
-            <h3>Welcome!</h3>
-            <div class = "left-align">
-              <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
-              <p class ="green">Some "rules"</p>
-              <ul>
-                <li>We are here for you!</li>
-                <li>Every question is important.</li>
-                <li>Help each other.</li>
-                <li>Have fun.</li>
-              </ul>
-            </div>
-          </section>
-          <section>
             <h3>Debugging your code</h3>
             <p>Not seeing anything when you run your code? You may need to turn on error logging. Put this code at the top of your page.</p>
-<pre><code class="php">// Report all PHP errors
-error_reporting(-1);
-</code></pre>
+			<pre><code class="php">// Report all PHP errors
+				error_reporting(-1);
+			</code></pre>
           </section>
         </section>
 
@@ -351,7 +337,7 @@ if ($bananas &gt;=2 &amp;&amp; $bananas &lt;7) {
           </section>
           <section>
             <h3>While loops</h3>
-            <p>While will repeat the same code over and over until some condition is met.</p>
+            <p>While will repeat the same code over and over as long as some condition is met.</p>
 <pre><code class="php">$bottlesOfBeer = 99;
 while ($bottlesOfBeer &gt;= 1) {
   echo $bottlesOfBeer . ' bottles of beer on the wall &lt;br /&gt;';
