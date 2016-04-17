@@ -1,8 +1,8 @@
 # Introduction to PHP and MySQL
 
-Slides and materials are hosted at [http://girldevelopit.github.io/gdi-intro-php-mysql/](http://girldevelopit.github.io/gdi-intro-php-mysql/).
+Slides and materials are hosted at [http://gdidetroit.github.io/intro-php-mysql/](http://gdidetrot.github.io/gdi-intro-php-mysql/).
 
-This is a modification of the official Girl Develop It PHP/MySQL curriculum, developed by Sylvia Richardson for the Raleigh/Durham chapter.The course is meant to be taught in 4 two-hour sections. Each of the slides and practice files are customizable according to the needs of a given class or audience.
+This is a modification of the official Girl Develop It PHP/MySQL curriculum, developed by Sylvia Richardson for the Raleigh/Durham chapter. Additional modifications have been made by Randy Walker to fit the Detroit chapter. The course is meant to be taught in 2 four-hour sessions. Each of the slides and practice files are customizable according to the needs of a given class or audience.
 
 ## Course description
 
@@ -16,4 +16,4 @@ Basic knowledge of HTML and CSS is recommended for this class. You do not need a
 
  - Your laptop (Mac, PC, or Linux are all okay).
  - A modern web browser - either Chrome or Firefox with Firebug installed.
- - A text editor. We recommend Sublime Text 2 (free; available for Mac, PC, and Linux).
+ - A text editor with syntax highlighting. We recommend [Atom](http://atom.io) (free; available for Mac, PC, and Linux).
