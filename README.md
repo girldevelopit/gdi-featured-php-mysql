@@ -2,7 +2,7 @@
 
 Slides and materials are hosted at [http://gdidetroit.github.io/intro-php-mysql/](http://gdidetrot.github.io/gdi-intro-php-mysql/).
 
-This is a modification of the official Girl Develop It PHP/MySQL curriculum, developed by Sylvia Richardson for the Raleigh/Durham chapter. Additional modifications have been made by Randy Walker to fit the Detroit chapter. The course is meant to be taught in 2 four-hour sessions (2 classes per session). Each of the slides and practice files are customizable according to the needs of a given class or audience.
+This is a modification of the official Girl Develop It PHP/MySQL curriculum, developed by Sylvia Richardson for the Raleigh/Durham chapter. Additional modifications have been made by Randy Walker to fit the Detroit chapter. The course is meant to be taught in 2 four-hour sessions. Each of the slides and practice files are customizable according to the needs of a given class or audience.
 
 ## Course description
 
